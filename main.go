@@ -177,6 +177,7 @@ func (c *ecsClient) DescribeService(ctx context.Context, cluster, service string
 	res, err := c.client.DescribeServices(ctx, &ecs.DescribeServicesInput{
 		Cluster:  &cluster,
 		Services: []string{service},
+		Include:  []types.ServiceField{types.ServiceFieldTags},
 	})
 	if err != nil {
 		return nil, err
@@ -191,6 +192,7 @@ func (c *ecsClient) DescribeService(ctx context.Context, cluster, service string
 func (c *ecsClient) DescribeTaskDefinition(ctx context.Context, taskDefArn string) (*types.TaskDefinition, error) {
 	res, err := c.client.DescribeTaskDefinition(ctx, &ecs.DescribeTaskDefinitionInput{
 		TaskDefinition: &taskDefArn,
+		Include:        []types.TaskDefinitionField{types.TaskDefinitionFieldTags},
 	})
 	if err != nil {
 		return nil, err
