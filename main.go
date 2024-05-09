@@ -8,8 +8,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
+	"github.com/goccy/go-yaml"
 	"github.com/spf13/cobra"
-	"sigs.k8s.io/yaml"
 )
 
 type options struct {
