@@ -45,6 +45,14 @@ func newCommand() *cobra.Command {
 
 // run controls the main flow of the command.
 func (o *options) run(ctx context.Context) error {
+	// if o.outdir does not exist, create it
+	if _, err := os.Stat(o.outdir); os.IsNotExist(err) {
+		if err := os.Mkdir(o.outdir, 0755); err != nil {
+			return fmt.Errorf("failed to create a directory %s: %v", o.outdir, err)
+		}
+		fmt.Printf("Created a directory %s\n", o.outdir)
+	}
+
 	client, err := newDefaultECSClient()
 	if err != nil {
 		return fmt.Errorf("failed to create ECS client: %v", err)
