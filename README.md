@@ -1,6 +1,8 @@
 # ecsdef-export
 
-Fetch and export ECS definitions (service&amp;taskdef) to files
+Fetch and export ECS definitions (service&amp;taskdef) to files.
+
+This is mainly created for [PipeCD](https://github.com/pipe-cd/) users.
 
 ## What you'll get
 
