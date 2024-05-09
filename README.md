@@ -11,10 +11,12 @@ Once you execute a command, you can generate ECS definition files like:
 <img src="./img/files.png">
 
 servicedef.yaml:
-<img src="./img/servicedef.png">
+
+<img src="./img/servicedef.png" width="50%">
 
 taskdef.yaml:
-<img src="./img/taskdef.png">
+
+<img src="./img/taskdef.png" width="50%">
 
 
 ## How to use it
