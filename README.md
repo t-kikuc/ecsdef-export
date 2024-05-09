@@ -2,26 +2,16 @@
 
 Fetch and export ECS definitions (service&amp;taskdef) to files
 
-## Expected
-<!-- 
+## What you'll get
 
-```sh
-$ go run main.go --cluster my-cluster --outdir ./output 
-Found 3 services
- 1. Export succeeded: my-service-1
- 2. Export succeeded: my-service-2
- 3. Export succeeded: my-service-3
-Successfully finished exporting.
-``` -->
-
-You can fetch ECS configs like:
+Once you execute a command, you can generate ECS definition files like:
 
 <img src="./img/files.png">
 
 servicedef.yaml:
 <img src="./img/servicedef.png">
 
-taskdef.yaml
+taskdef.yaml:
 <img src="./img/taskdef.png">
 
 
