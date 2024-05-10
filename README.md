@@ -23,13 +23,15 @@ taskdef.yaml:
 
 - Prerequisites
   - You have golang
-  - You can execute AWS commands to your AWS account.
+  - You can execute AWS commands to your AWS account. (e.g. `aws ecs list-services --cluster <your-cluster>`)
 
 1. Execute the following command.
 
     ```sh
     go run main.go --cluster <YOUR_ECS_CLUSTER_NAME> --outdir ./YOUR/TARGET/DIR
     ```
+
+    Then the definition files will be generated under `./YOUR/TARGET/DIR`.
 
 2. (optional) If you want to remove unnecessary fields from the generated files, execute the following command.
 
