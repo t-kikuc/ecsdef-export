@@ -51,3 +51,5 @@ taskdef.yaml:
     -e '/registeredat:/d' \
     -e '/registeredby:/d' {} \;
     ```
+
+test: github branch protection rule
